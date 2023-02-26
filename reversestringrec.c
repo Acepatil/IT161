@@ -1,3 +1,4 @@
+//Program to write a function to reverse a string
 #include <stdio.h>
 #include <string.h>
 void reverse(char c[], int s, int n) 
