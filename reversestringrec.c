@@ -1,26 +1,25 @@
 #include <stdio.h>
 #include <string.h>
-void reverseString(char str[], int s, int n) 
+void reverse(char c[], int s, int n) 
 {
-    if (s>= n) {
+    if (s>= n) 
+    {
         return;
     }
-    char temp = str[s];
-    str[s] = str[n];
-    str[n] = temp;
-    reverseString(str, s + 1, n - 1);
+    char temp = c[s];
+    c[s] = c[n];
+    c[n] = temp;
+    reverse(c,s+1,n-1);
 }
 
 int main() {
-    char str[100];
+    char c[30];
     int n;
     printf("Enter a string: ");
-    fgets(str, 100, stdin);
-    str[strcspn(str, "\n")] = '\0'; // remove newline character from input
-
-    reverseString(str, 0, n - 1);
-
-    printf("Reversed string: %s\n", str);
-
+    fgets(c,30,stdin);
+    n=strlen(c);
+    c[strcspn(c,"\n")] = '\0';
+    reverse(c,0,n-1);
+    printf("Reversed string: %s\n",c);
     return 0;
 }
