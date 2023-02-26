@@ -7,13 +7,13 @@ int main()
     printf("Write the number of elements in array:-");
     scanf("%d",&n);
     int a[n];
-    for (int i = 0; i < n; i++)
+    for (int i=0; i<n; i++)
     {
         scanf("%d",&a[i]);
     }
     sort(a,n);
 }
-int sort(int a[], int n) 
+int sort(int a[],int n) 
 {
     if (n==1) 
     {
