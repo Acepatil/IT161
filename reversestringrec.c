@@ -18,8 +18,8 @@ int main() {
     int n;
     printf("Enter a string: ");
     fgets(c,30,stdin);
-    n=strlen(c);
     c[strcspn(c,"\n")] = '\0';
+    n=strlen(c);
     reverse(c,0,n-1);
     printf("Reversed string: %s\n",c);
     return 0;
